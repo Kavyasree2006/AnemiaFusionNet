@@ -2,11 +2,23 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
+import os
 
 st.title("🗺️ Geo Risk Analysis")
 
 try:
-    df = pd.read_csv("dataset/full_dataset.csv")
+
+csv_path = "dataset/full_dataset.csv"
+
+if os.path.exists(csv_path):
+    df = pd.read_csv(csv_path)
+
+    # plots here
+
+else:
+    st.info(
+        "Geo-risk analytics require the local dataset."
+    )
 
     if "state" in df.columns and "geo_risk" in df.columns:
 
