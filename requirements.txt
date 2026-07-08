@@ -1,0 +1,13 @@
+
+streamlit
+torch
+torchvision
+timm
+pandas
+numpy
+pillow
+matplotlib
+plotly
+scikit-learn
+fpdf
+sqlalchemy
